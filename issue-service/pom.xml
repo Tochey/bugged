@@ -11,8 +11,8 @@
     <groupId>com.example</groupId>
     <artifactId>issueservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>issueservice</name>
-    <description>issueservice</description>
+    <name>issue-service</name>
+    <description>issue-service</description>
     <properties>
         <java.version>11</java.version>
         <spring-cloud.version>2021.0.3</spring-cloud.version>
