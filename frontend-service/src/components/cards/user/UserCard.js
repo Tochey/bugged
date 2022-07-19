@@ -1,15 +1,14 @@
 import React from "react";
 import {useEffect, useState} from "react";
 import axios from "axios";
+import './user.css'
 
-const User = () => {
+const UserCard = () => {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
         axios.get("http://localhost:9191/users/getall").then((e) => setUsers(e.data))
     }, []);
-
-
 
         return (
             <>
@@ -48,4 +47,4 @@ const User = () => {
 }
 
 
-export default User
+export default UserCard

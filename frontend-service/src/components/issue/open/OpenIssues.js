@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import EditPopup from "../popup/EditPopup"
+import EditPage from "../../actions/edit/EditPage"
 import axios from "axios";
 
 const RenderAssignee = ({username}) => {
@@ -59,13 +59,13 @@ const RenderInfo = ({issues}) => {
                 </div>
             ).reverse()}
 
-            <EditPopup open={state} onClose={() => setState(false)} issueId={issueId}/>
+            <EditPage open={state} onClose={() => setState(false)} issueId={issueId}/>
         </>
 
     )
 }
 
-const OpenIssue = () => {
+const OpenIssues = () => {
     const [state, setState] = useState([])
 
     useEffect(() => {
@@ -125,4 +125,4 @@ const OpenIssue = () => {
 
 }
 
-export default OpenIssue
+export default OpenIssues

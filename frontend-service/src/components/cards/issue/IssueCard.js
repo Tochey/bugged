@@ -1,4 +1,5 @@
 import React from 'react';
+import './issuecard.css'
 
 
 const IssueCard = ({count, subject, name, priorityColor, priority,lastUpdated, avatar}) => {

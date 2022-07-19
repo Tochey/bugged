@@ -1,10 +1,7 @@
 import React, {useState} from "react";
-// import "/Users/don/Desktop/local code/projects/bugtracker/frontend-service/src/style.css"
-import "../style.css"
-import IssuePopup from "../popup/IssuePopup"
+import CreateIssue from "../actions/create/issue/CreateIssue"
 import {Link} from "react-router-dom";
-import UserPopup from "../popup/UserPopup";
-// import logo from "./bug-svgrepo-com.svg"
+import CreateUser from "../actions/create/user/CreateUser";
 
 const Header = ({openIssue, openUser}) => {
     const [state, setState] = useState(false)
@@ -12,7 +9,7 @@ const Header = ({openIssue, openUser}) => {
 
     const DynamicCreateBtn = () => {
          return (
-             // eslint-disable-next-line jsx-a11y/anchor-is-valid
+             // eslint-disable-next-line
              <a
                  onClick={() => {
                      setState(openIssue)
@@ -45,21 +42,18 @@ const Header = ({openIssue, openUser}) => {
                             <a className="nav-item nav-link active"  aria-current="page">All issues</a>
                             </Link>
                             <Link to="/open-issues">
-                                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                            <a className="nav-item nav-link">Open issues</a>
+                            <a className="nav-item nav-link" href="/">Open issues</a>
                             </Link>
                             <Link to="/completed-issues">
-                                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                            <a className="nav-item nav-link" >Completed issues</a>
+                            <a className="nav-item nav-link" href="/">Completed issues</a>
                             </Link>
                             <a className="nav-item nav-link" href="https://www.linkedin.com/in/tochidon/" target="_blank" rel="noreferrer">About me</a>
-                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                            <a className="nav-item nav-link">Source</a>
+                            <a className="nav-item nav-link" href="/">Source</a>
                         </div>
                         <div className="navbar-nav ms-lg-4">
                             <Link to="/user">
-                                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                            <a className="nav-item nav-link">User</a>
+
+                            <a className="nav-item nav-link" href="/">User</a>
                             </Link>
                         </div>
                         <div className="d-flex align-items-lg-center mt-3 mt-lg-0">
@@ -75,8 +69,8 @@ const Header = ({openIssue, openUser}) => {
                 </div>
 
             </nav>
-            <IssuePopup open={state} onClose={() => setState(false)} />
-            <UserPopup  open={user} onClose={() => setUser(false)}/>
+            <CreateIssue open={state} onClose={() => setState(false)} />
+            <CreateUser open={user} onClose={() => setUser(false)}/>
         </>
     )
 }

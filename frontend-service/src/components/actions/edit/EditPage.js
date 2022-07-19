@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import "../style.css"
+import "../../style.css"
 import axios from "axios";
 
 const RenderUsers = () => {
@@ -16,7 +16,7 @@ const RenderUsers = () => {
 }
 
 
-const EditPopup = ({open, onClose, issueId}) => {
+const EditPage = ({open, onClose, issueId}) => {
 
     if(!open){
         return null
@@ -111,4 +111,4 @@ const EditPopup = ({open, onClose, issueId}) => {
 
 }
 
-export default EditPopup
+export default EditPage

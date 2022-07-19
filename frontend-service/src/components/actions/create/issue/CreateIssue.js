@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
-import "../style.css"
-
+import './createissue.css'
 import axios from "axios";
+
+
 
 const RenderUsers = () => {
 
@@ -16,7 +17,7 @@ const RenderUsers = () => {
     )
 }
 
-const IssuePopup = ({open, onClose}) => {
+const CreateIssue = ({open, onClose}) => {
     let userInput;
 
     const [issue, setIssue] = useState({
@@ -50,9 +51,7 @@ const IssuePopup = ({open, onClose}) => {
                 </div>
                 <form id="send" className="send-form">
                     <div className="form-group">
-
                         <input type="text" placeholder="Enter Subject..." id="name" name="subject" value = {issue.subject} required="required" onChange={(e) => handleChange(e)} />
-
                     </div>
                     <div className="form-group">
 
@@ -102,4 +101,4 @@ const IssuePopup = ({open, onClose}) => {
 
 }
 
-export default IssuePopup
+export default CreateIssue

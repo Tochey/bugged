@@ -1,0 +1,66 @@
+
+.user-image img{
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+    border-radius: 100%;
+    margin: auto;
+    display: block;
+}
+.user-image{
+    padding: 20px 0 0 0;
+}
+
+.title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 24px;
+}
+
+.title h4{
+    font-size: 25px;
+    color: #16192c;
+}
+.issue-box{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.person-name img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50% !important;
+}
+
+.person-social{
+    text-align: center;
+    font-size: 30px;
+    padding: 0;
+}
+
+.user-name{
+    padding: 15px 10px;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.feature-button{
+    background-color:#02bbab;
+    color: white;
+    padding: 5px 1px;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px){
+    h1 {font-size: 25px;}
+    h2 {font-size: 14px;}
+    form#send .main-btn-rect {padding: 7px 60px; font-size: 14px;}
+    .popup-btn{padding: 7px 60px; font-size: 14px;}
+}
+
+
+
+

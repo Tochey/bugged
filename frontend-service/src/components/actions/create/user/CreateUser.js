@@ -3,15 +3,13 @@ import axios from "axios"
 
 
 
-const UserPopup = ({open, onClose}) => {
+const CreateUser = ({open, onClose}) => {
     let userInput;
     const [user, setUser] = useState({
         fname:"",
         lname: "",
         email: ""
     });
-
-
     const handleChange= (e)=> {
         e.preventDefault();
         userInput = e.target.value;
@@ -21,7 +19,6 @@ const UserPopup = ({open, onClose}) => {
             [e.target.name] : userInput
         })
     }
-
 
     if(!open){
        console.log("not rendering this" + open)
@@ -37,21 +34,14 @@ const UserPopup = ({open, onClose}) => {
             </div>
             <form id="send" className="send-form">
                 <div className="form-group">
-
                     <input type="text" placeholder="First Name..." id="name" name = "fname" value={user.fname} required="required" onChange={(e)=> handleChange(e)} />
-
                 </div>
                 <div className="form-group">
-
                     <input type="text" placeholder="Last Name..." id="name" value={user.lname} name="lname" required="required" onChange={(e)=> handleChange(e)} />
-
                 </div>
                 <div className="form-group">
-
                     <input type="text" placeholder="Title..." id="name" value={user.title} name="title" required="required" onChange={(e)=> handleChange(e)} />
-
                 </div>
-
                 <button type="submit" className="main-btn-rect" name="text" onClick= {()=> axios.post("http://localhost:9191/users/create", user)}>
                     <i className="fa fa-paper-plane"></i>Save</button>
             </form>
@@ -61,4 +51,4 @@ const UserPopup = ({open, onClose}) => {
      </>
     )
 }
-export default UserPopup
+export default CreateUser

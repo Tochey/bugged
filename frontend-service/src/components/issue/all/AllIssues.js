@@ -1,6 +1,7 @@
-import IssueCard from "../cards/issuecard/IssueCard";
+import IssueCard from "../../cards/issue/IssueCard";
 import React, {useEffect, useState} from "react";
 import axios from "axios"
+import './allissues.css'
 const colorPicker = (prio) => {
     if (prio === "NORMAL") {
         return "rgba(0, 93, 241, 1)"

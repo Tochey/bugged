@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 import axios from "axios";
-import IssueCard from "../cards/issuecard/IssueCard";
+import IssueCard from "../../cards/issue/IssueCard";
 let counter = 12012
 const colorPicker = (prio) => {
     if (prio === "NORMAL") {
@@ -38,7 +38,7 @@ const Card = ({e}) => {
 
 }
 
-const CompletedIssue = () => {
+const CompletedIssues = () => {
 
     const [issue, setIssue] = useState([])
 
@@ -66,4 +66,4 @@ const CompletedIssue = () => {
     )
 }
 
-export default CompletedIssue
+export default CompletedIssues

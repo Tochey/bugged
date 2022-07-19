@@ -1,0 +1,96 @@
+@import url(https://unpkg.com/@webpixels/css@1.0/dist/index.css);
+.issue-number{
+    background-color: #16192c;
+    padding: 5px 10px;
+    color: white;
+}
+.issue-box{
+    margin-top: 10px !important;
+}
+.col-lg-3 h1{
+    text-align: center;
+}
+.name-issue{
+    padding: 15px 10px;
+    font-size: 15px;
+    color: black;
+    border-bottom: 1px solid lightgray;
+    word-break: break-word;
+
+}
+@media (max-width:767px){
+    .person-name .row{
+        display: flex !important;
+    }
+    .person-name .col-md-3{
+        width: 25% !important;
+    }
+    .person-name .col-md-9{
+        width: 75% !important;
+    }
+}
+.user-name p{
+    font-size: 18px;
+}
+.user-name{
+    padding: 15px 10px;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+.person-name img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50% !important;
+}
+
+.person-social{
+    text-align: center;
+    font-size: 30px;
+    padding: 0;
+}
+.person-name span{
+    font-size: 18px;
+    line-height: 10px;
+    color: black;
+}
+.issue-button{
+
+}
+.issue-box{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.person-name{
+    padding: 20px 10px;
+}
+.issue-button{
+  background-color: red;
+  color: white;
+  padding: 5px 1px;
+  font-size: 20px;
+  text-align: center;
+}
+.feature-button{
+  background-color:#02bbab;
+  color: white;
+  padding: 5px 1px;
+  font-size: 20px;
+  text-align: center;
+}
+.bug-button{
+  background-color:#efab52;
+  color: white;
+  padding: 5px 1px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.task-button{
+  background-color:#4cb5fc;
+  color: white;
+  padding: 5px 1px;
+  font-size: 20px;
+  text-align: center;
+}

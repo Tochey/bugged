@@ -1,0 +1,273 @@
+.main-btn-rect,
+.main-btn-circle{
+    position: relative;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFF0;
+    background-color: #16192c;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    z-index: 100;
+}
+.main-btn-rect {
+    padding: 10px 80px;
+    line-height: 30px;
+}
+.main-btn-rect:before,
+.main-btn-rect:after{
+    position: absolute;
+    content: '';
+    top:0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 240, 0.2);
+    -webkit-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s;
+}
+.main-btn-rect:before {
+    left: 0;
+}
+.main-btn-rect:after {
+    right: 0;
+}
+.main-btn-rect:hover:before,
+.main-btn-rect:hover:after{
+    width: 50%;
+}
+.main-btn-circle{
+    height: 40px;
+    width: 40px;
+    -webkit-border-radius: 50%;
+    border-radius: 100%;
+    line-height: 40px;
+    -webkit-transition: box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+}
+.main-btn-circle:hover{
+    -webkit-box-shadow: inset 2px 1px 0 20px rgba(255, 255, 240, 0.2);
+    -moz-box-shadow: inset 2px 1px 0 20px rgba(255, 255, 240, 0.2);
+    box-shadow: inset 2px 1px 0 20px rgba(255, 255, 240, 0.2);
+}
+.popup{
+    position: fixed;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+}
+.popup.active{
+    top:0;
+    background-color: rgba(3, 3, 3, 0.9);
+    transition: background-color .6s ,opacity .6s;
+}
+.popup .main-btn-rect{
+    padding: 10px 100px;
+}
+.popup .popup-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-height: 668px;
+    /*max-height: 568px;*/
+    min-width: 390px;
+    /*min-width: 320px;*/
+    margin-top: 150px;
+    padding: 25px;
+    background-color: #fff;
+    color: #070000;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transition: margin .6s;
+    -webkit-transition: margin .6s;
+    -moz-transition: margin .6s;
+    -o-transition: margin .6s;
+}
+.popup.active .popup-content{
+    margin-top: 0;
+}
+.popup-content h4{
+    display: table;
+    font-size: 16px;
+    text-align: center;
+    margin: 10px auto;
+    font-family: 'Roboto',sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.form-group{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+form#send input,form#send textarea{
+    position: relative;
+    margin-top:15px;
+    width: 100%;
+    /*height: 29px;*/
+    font-family: 'RobotoLight', sans-serif;
+    resize: none;
+    word-break: break-all;
+
+
+    background-color: transparent;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid #070000;
+    -webkit-transition: border 0.6s;
+    -o-transition: border 0.6s;
+    transition: border 0.6s;
+}
+form#send input:focus,
+form#send textarea:focus{
+    border-bottom: 1px solid rgb(63, 173, 168);
+}
+.form-group select{
+    width: 100% !important;
+    margin-top: 15px;
+    border: 1px solid;
+    padding: 5px;
+    background-color: transparent;
+}
+form#send label{
+    position: absolute;
+    top: 0;
+    line-height: 28px;
+    -webkit-transition: color .5s;
+    -o-transition: color .5s;
+    transition: color .5s;
+}
+form#send input:focus + label,
+form#send textarea:focus + label{
+    color: rgb(63, 173, 168);
+}
+form#send .txt{
+    line-height: 22px;
+    left: 2px;
+}
+form#send .main-btn-rect {
+    position: relative;
+    display: block;
+    padding: 12px 80px;
+    margin: 0 auto;
+    margin-top: 10px !important;
+    font-size: 14px;
+}
+form#send .main-btn-rect i {
+    margin-right: 5px;
+}
+.popup .fade-out{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    text-align: center;
+    font-size: 15px;
+}
+.share-wrap{
+    position: absolute;
+    display: inline-table;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    text-align: center;
+}
+.share-btn{
+    color: #FFFFF0;
+    padding: 7px 25px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 100;
+    font-size: 14px;
+    font-family:'Lobster', sans-serif;
+    background-color: rgba(63, 173, 168, .8);
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color .5s;
+    -webkit-transition: background-color .5s;
+    -moz-transition: background-color .5s;
+    -o-transition: background-color .5s;
+}
+.share-btn:hover{
+    color: #FFFFF0;
+    text-decoration: none;
+    background-color: rgba(63, 173, 168, 1.0);
+}
+
+.resp-sharing-button__link,
+.resp-sharing-button__icon {
+    display: inline-block
+}
+.resp-sharing-button__link {
+    text-decoration: none;
+    color: #fff;
+    margin: 2px;
+}
+.resp-sharing-button {
+    border-radius: 5px;
+    transition: 25ms ease-out;
+    padding: 6px 9px;
+    transition: background-color .5s;
+    -webkit-transition: background-color .5s;
+    -moz-transition: background-color .5s;
+    -o-transition: background-color .5s;
+}
+.resp-sharing-button__icon svg {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.4em;
+    vertical-align: top
+}
+.resp-sharing-button--small svg {
+    margin: 0;
+    vertical-align: middle
+}
+.resp-sharing-button__icon,
+.resp-sharing-button__icon--solid,
+.resp-sharing-button__icon--solidcircle {
+    fill: #fff;
+    stroke: none
+}
+.resp-sharing-button--facebook {
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+.resp-sharing-button--facebook:hover,
+.resp-sharing-button--facebook:active {
+    background-color: #2d4373;
+    border-color: #2d4373;
+}
+.resp-sharing-button--twitter {
+    background-color: #55acee;
+    border-color: #55acee;
+}
+.resp-sharing-button--twitter:hover,
+.resp-sharing-button--twitter:active {
+    background-color: #2795e9;
+    border-color: #2795e9;
+}
+.resp-sharing-button--linkedin {
+    background-color: #0077b5;
+    border-color: #0077b5;
+}
+.resp-sharing-button--linkedin:hover,
+.resp-sharing-button--linkedin:active {
+    background-color: #046293;
+    border-color: #046293;
+}
+@media only screen and (max-width: 768px){
+    h1 {font-size: 25px;}
+    h2 {font-size: 14px;}
+    form#send .main-btn-rect {padding: 7px 60px; font-size: 14px;}
+    .popup-btn{padding: 7px 60px; font-size: 14px;}
+}
