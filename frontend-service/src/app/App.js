@@ -1,11 +1,11 @@
 import "./App.css"
-import Header from "./components/header/Header";
+import Header from "../components/header/Header";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import React from "react";
-import AllIssues from "./components/issue/all/AllIssues";
-import OpenIssues from "./components/issue/open/OpenIssues";
-import UserCard from "./components/cards/user/UserCard";
-import CompletedIssues from "./components/issue/completed/CompletedIssues";
+import AllIssues from "../components/issue/all/AllIssues";
+import OpenIssues from "../components/issue/open/OpenIssues";
+import UserCard from "../components/cards/user/UserCard";
+import CompletedIssues from "../components/issue/completed/CompletedIssues";
 
 
 function App() {
