@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import EditPage from "../../actions/edit/EditPage"
 import axios from "axios";
+import './openissues.css'
 
 const RenderAssignee = ({username}) => {
-    return <p className="signe">Assignee: {username} </p>
+    return   <tr className="table__assignee">
+        <td colSpan="10">Assignee : {username} </td>
+    </tr>
 }
 
 const Priority = ({priority}) => {
@@ -31,34 +34,28 @@ const RenderInfo = ({issues}) => {
     return (
         <>
             {issues.map((e) =>
-                <div className="column">
-                    <div className="status">
-                        <span className={e.status}> {e.status} </span>
-                    </div>
-                    <div className="key">
-                        <p onClick={() => {
-                            setIssueId(e.issueId)
-                            setState(true)
-                        }}> #{e.val} </p>
-                    </div>
-                    <div className="subject">
-                        <p>{e.subject}</p>
-                    </div>
-                    <div className="category">
-                        <p> category </p>
-                    </div>
-                    <div className="priority">
+            <tr className="table__data-row">
+                <td data-label="Account">
+                    <span className={'badge badge--'+`${e.status}`}>{e.status}</span>
+                </td>
+                <td data-label="Due Date">
+                    <a className="table__link" href="" onClick={() => {
+                        setIssueId(e.issueId)
+                        setState(true)
+                    }} > #12024 </a>
+                </td>
+                <td data-label="Amount" colSpan="4">
+                    {e.subject}
+                </td>
+                <td data-label="Category">category</td>
+                <td data-label="Priority">
+                    <div className="priority-wrapper">
                         <Priority priority={e.priority}/>
                     </div>
-                    <div className="last-updated">
-                        <p className="lastupdated">{e.lastUpdated}</p>
-                    </div>
-                    <div className="created-at">
-                        <p className="created">09:44:56 AM</p>
-                    </div>
-                </div>
-            ).reverse()}
-
+                </td>
+                <td data-label="Last Update">{e.lastUpdated}</td>
+                <td data-label="Created">12:11:23 AM</td>
+            </tr> ).reverse()}
             <EditPage open={state} onClose={() => setState(false)} issueId={issueId}/>
         </>
 
@@ -76,49 +73,34 @@ const OpenIssues = () => {
 
     }, []);
     return (
-        <div className="App">
-            <div className="title">
-                <h4> issues</h4>
-            </div>
-            <div className="table">
-                <div className="header">
-                    <div className="status">
-                        <h4>Status</h4>
-                    </div>
-                    <div className="key">
-                        <h4>Key</h4>
-                    </div>
-                    <div className="subject">
-                        <h4>Subject</h4>
-                    </div>
-                    <div className="category">
-                        <h4>Category</h4>
-                    </div>
-                    <div className="priority">
-                        <h4>Priority</h4>
-                    </div>
-                    <div className="last-updated">
-                        <h4>Last Update</h4>
-                    </div>
-                    <div className="created-at">
-                        <h4>Created</h4>
-                    </div>
-                </div>
+        <>
+            <caption>
+            Issues
+        </caption>
+        <table>
+            <thead>
+            <tr>
+                <th scope="col">Status</th>
+                <th scope="col">Key</th>
+                <th scope="col" colSpan="4">Subject</th>
+                <th scope="col">Category</th>
+                <th scope="col">Priority</th>
+                <th scope="col">Last Update</th>
+                <th scope="col">Created</th>
+            </tr>
+            </thead>
 
                 {state.map((e) =>
                     <>
-
+                        <tbody>
                         <RenderAssignee username={e.user.fname + " " + e.user.lname}/>
-                        <div className="data">
-                            <div className="data-in">
-                                <RenderInfo issues={e.issues}/>
-                            </div>
-
-                        </div>
-                    </>
+                        <RenderInfo issues={e.issues}/>
+                        </tbody>
+                        </>
                 )}
-            </div>
-        </div>
+        </table>
+        </>
+
 
 
     );
