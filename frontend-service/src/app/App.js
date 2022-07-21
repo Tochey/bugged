@@ -2,10 +2,10 @@ import "./App.css"
 import Header from "../components/header/Header";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import React from "react";
-import AllIssues from "../components/issue/all/AllIssues";
-import OpenIssues from "../components/issue/open/OpenIssues";
+import AllIssues from "../components/issues/all/AllIssues";
+import OpenIssues from "../components/issues/open/OpenIssues";
 import UserCard from "../components/cards/user/UserCard";
-import CompletedIssues from "../components/issue/completed/CompletedIssues";
+import CompletedIssues from "../components/issues/completed/CompletedIssues";
 
 
 function App() {
