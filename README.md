@@ -52,8 +52,8 @@
 <!-- Features -->
 ### :dart: Features
 
-- Create Issue with an array of attributes attached
-- Assigne issues and visually view the current status
+- Create Issue and assign issues to existing users
+- Filter all completed issues
 - Ability to create new users
 
 
