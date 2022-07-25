@@ -4,26 +4,23 @@
   <p>
     A lightweight issue tracker build with a microservices architecture
   </p>
- <a> [View Demo](https://github.com/Tochey/bugged/files/9178548/buggedDemo.mp4.zip) </a>
-<h4>
+ [View Demo](https://github.com/Tochey/bugged/files/9178548/buggedDemo.mp4.zip) 
+<h4>[buggedDemo.mp4.zip](https://github.com/Tochey/bugged/files/9178567/buggedDemo.mp4.zip)
+
    
   </h4>
 </div>
 
 <br />
 
-
-  
-
 <!-- About the Project -->
 ## :star2: About the Project
-
 
 <!-- Screenshots -->
 ### :camera: Screenshots
 
 <div align="center"> 
- <img src ="https://user-images.githubusercontent.com/54341970/180712577-306a2510-a93c-4f6f-88c5-8ffe5738aee8.png" >
+ <img src ="https://user-images.githubusercontent.com/54341970/180712737-21a5d2ed-b50e-44b9-a17c-f4ee3b15afe9.png" >
   <img src = "https://user-images.githubusercontent.com/54341970/180704103-97df8088-07f6-4604-9e54-0eaac2a3670c.png">
 </div>
 
