@@ -31,6 +31,7 @@ const Priority = ({priority}) => {
 const RenderInfo = ({issues}) => {
     const [state, setState] = useState(false)
     const [issueId, setIssueId] = useState(0)
+    console.log(issues)
     return (
         <>
             {issues.map((e) =>
@@ -45,9 +46,9 @@ const RenderInfo = ({issues}) => {
                     }} > #{e.val} </a>
                 </td>
                 <td data-label="Amount" colSpan="4">
-                    {e.subject}
+                    {/*{e.description}*/} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur autem consequatur debitis delectus ea error eveniet exercitationem fuga, itaque iure molestiae nihil nostrum numquam quaerat repudiandae veritatis? Assumenda corporis dolorem fuga fugit, laudantium minima nostrum repellendus? Architecto, aspernatur deserunt harum ipsa, nisi perferendis quam quis, repellat tempora veniam vero!
                 </td>
-                <td data-label="Category">category</td>
+                <td data-label="Category">{e.category}</td>
                 <td data-label="Priority">
                     <div className="priority-wrapper">
                         <Priority priority={e.priority}/>
@@ -82,7 +83,7 @@ const OpenIssues = () => {
             <tr>
                 <th scope="col">Status</th>
                 <th scope="col">Key</th>
-                <th scope="col" colSpan="4">Subject</th>
+                <th scope="col" colSpan="4">Description</th>
                 <th scope="col">Category</th>
                 <th scope="col">Priority</th>
                 <th scope="col">Last Update</th>

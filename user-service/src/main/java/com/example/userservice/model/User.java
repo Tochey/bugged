@@ -24,10 +24,6 @@ public class User {
     @Column
     private String avatar;
 
-
-
-
-
     public User(String fname, String lname, String title, String avatar){
 
         this.fname = fname;

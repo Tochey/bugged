@@ -97,15 +97,6 @@ public class IssueService {
         return optional.get();
     }
 
-//    public Optional<Issue> updateStatus(int id, String status) {
-//
-//        Optional<Issue> optionalIssue = repository.findById(id);
-//        optionalIssue.get().setStatus(Status.valueOf(status));
-//        repository.save(optionalIssue.get());
-//        return optionalIssue;
-//    }
-
-
     public List<Issue> getByStatus(List<String> status) {
         List<List<Issue>> issueList = new ArrayList<>();
 
@@ -122,21 +113,4 @@ public class IssueService {
 
     }
 
-
-
-//    public User[] closeIssue(int issueid) {
-//        Optional<Issue> issue = repository.findById(issueid);
-//
-//        issue.get().setStatus(Status.DONE);
-//        repository.save(issue.get());
-//
-//        //updating user side
-//        ResponseEntity<User[]> response = template.getForEntity("http://USER-SERVICE/users/getusersbyissueid?issueid=" + issueid, User[].class);
-//        User[] objects = response.getBody();
-//
-//
-//        return objects;
-//
-//
-//    }
 }

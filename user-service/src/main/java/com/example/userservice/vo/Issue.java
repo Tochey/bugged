@@ -17,6 +17,5 @@ public class Issue {
     private Status status;
     private Priority priority;
     private int val;
-
-
+    private String category;
 }

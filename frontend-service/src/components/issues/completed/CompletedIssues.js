@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 
 import axios from "axios";
 import IssueCard from "../../cards/issue/IssueCard";
-let counter = 12012
 const colorPicker = (prio) => {
     if (prio === "NORMAL") {
         return "rgba(0, 93, 241, 1)"
@@ -32,8 +31,8 @@ const Card = ({e}) => {
 
 
     if (user != null) {
-        return <IssueCard count={counter++} subject={e.subject} name={user}
-                          priority={e.priority} priorityColor={color} lastUpdated={e.lastUpdated} avatar={avatar}/>
+        return <IssueCard count={e.val} subject={e.subject} name={user}
+                          priority={e.priority} priorityColor={color} category={e.category} avatar={avatar}/>
     }
 
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import './issuecard.css'
 
 
-const IssueCard = ({count, subject, name, priorityColor, priority,lastUpdated, avatar}) => {
+const IssueCard = ({count, subject, name, priorityColor, priority,category, avatar}) => {
 
     const Priority = ({color}) => {
         return <div className="task-button" id="priority" style={{backgroundColor: color}}>
@@ -26,7 +26,9 @@ const IssueCard = ({count, subject, name, priorityColor, priority,lastUpdated, a
                         <img src={avatar} alt="" srcSet=""/>
                     </div>
                     <div className="col-md-9">
-                        <span>{name}<br/><span style={{fontSize:"15px"}}> Last Updated: {lastUpdated} </span></span>
+                        <span>{name}<br/>
+                            <span style={{fontSize:"15px"}}> Category: <span style={{fontSize:"17px"}}>{category}</span> </span>
+                        </span>
                     </div>
                 </div>
 

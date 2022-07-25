@@ -65,8 +65,6 @@ public class UserService {
 
 
     public List<ResponseTemplateVO> getusersandissues(){
-
-
         List<ResponseTemplateVO> list = new ArrayList<ResponseTemplateVO>();
         List<User> userList =   repository.findAll();
 
@@ -75,49 +73,10 @@ public class UserService {
          Issue[] response =   template.getForObject("http://ISSUE-SERVICE/issues/getUsersIssues/" + u.getUserId(), Issue[].class);
           assert response != null;
           vo.setUser(u);
-
           vo.setIssues(Arrays.asList(response));
-
           list.add(vo);
       }
-
         return list;
     }
 
-//    public User assignIssueToUser(int userId, int issueId) {
-//
-//        Optional<User> user = repository.findById(userId);
-//
-//        if(user.isEmpty()) {
-//          return null;
-//        }
-//        repository.save(user.get());
-//
-//        return user.get();
-//    }
-
-//    public List<User> getByIssueId(int id) {
-//        List<User> userList = repository.findAllByassignedIssue(id);
-//        userList.forEach((e) -> {
-//            e.setAssignedIssue(0);
-//            repository.save(e);
-//        });
-//        return userList;
-//    }
-
-//    public ResponseTemplateVO updateIssueStatus(int id, String status) {
-//        ResponseTemplateVO vo = new ResponseTemplateVO();
-//        Issue issue = template.getForObject("http://ISSUE-SERVICE/issue/updateStatus/" + id + "?" + "status=" + status, Issue.class);
-//        vo.setIssue(issue);
-//        return vo;
-//
-//    }
-
-//    public User reassignIssueToUser( int previousissueid) {
-//        Optional<User> previous = repository.findById(previousissueid);
-//        previous.get()
-//                .setAssignedIssue(0);
-//        return repository.save(previous.get());
-//
-//    }
 }

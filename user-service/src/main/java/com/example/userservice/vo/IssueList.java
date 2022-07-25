@@ -10,8 +10,6 @@ import java.util.List;
 @AllArgsConstructor
 public class IssueList {
     private List<Issue> issues;
-
-
     private IssueList (){
         issues = new ArrayList<>();
     }

@@ -36,7 +36,7 @@ const Card = ({issue}) => {
 
     if (user != null) {
         return <IssueCard count={issue.val} subject={issue.subject} name={user} title={title}
-                          priority={issue.priority} priorityColor={color} lastUpdated={issue.lastUpdated} avatar={avatar}/>
+                          priority={issue.priority} priorityColor={color} lastUpdated={issue.lastUpdated} avatar={avatar} category={issue.category}/>
     }
 
 }

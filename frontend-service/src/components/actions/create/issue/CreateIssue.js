@@ -25,7 +25,8 @@ const CreateIssue = ({open, onClose}) => {
         description: "",
         assignee: "",
         status: "",
-        priority: ""
+        priority: "",
+        category : ""
 
     });
 
@@ -54,12 +55,12 @@ const CreateIssue = ({open, onClose}) => {
                         <input type="text" placeholder="Enter Subject..." id="name" name="subject" value = {issue.subject} required="required" onChange={(e) => handleChange(e)} />
                     </div>
                     <div className="form-group">
-
-                        <textarea placeholder="Enter Description..." name="description" value =  {issue.description} id="text" cols="50" rows="6" maxLength="255" required onChange={(e) => handleChange(e)}></textarea>
-
+                        <input type="text" placeholder="Enter Category..." id="description" name="category" value = {issue.category} required="required" onChange={(e) => handleChange(e)} />
                     </div>
                     <div className="form-group">
-
+                        <textarea placeholder="Enter Description..." name="description" value =  {issue.description} id="text" cols="50" rows="6" maxLength="255" required onChange={(e) => handleChange(e)}></textarea>
+                    </div>
+                    <div className="form-group">
                         <select id="cars" name="assignee"   value = {issue.assignee} onChange={(e) => handleChange(e)} >
                             <option value="" disabled selected hidden>Assignee</option>
                             <option value={0} >Unassigned</option>

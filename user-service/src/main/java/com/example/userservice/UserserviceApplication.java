@@ -32,9 +32,10 @@ public class UserserviceApplication {
             // save a couple of Employees
                 repository.save(new User("Ashley", "Jones", "Senior Software Engineer","https://robohash.org/eossitaspernatur.png?size=50x50&set=set1"));
                 repository.save(new User("Cordae", "Waterway", "Junior Software Engineer", "https://robohash.org/doloresestratione.png?size=50x50&set=set1"));
-                repository.save(new User("Ashley", "Diamati", "Software Engineer intern", "https://robohash.org/consequunturculpaaccusamus.png?size=50x50&set=set1"));
+                repository.save(new User("Jennifer", "Diamati", "Software Engineer intern", "https://robohash.org/consequunturculpaaccusamus.png?size=50x50&set=set1"));
                 repository.save(new User("James", "Bondi", "Frontend Engineer", "https://robohash.org/officiasintmollitia.png?size=50x50&set=set1"));
-                repository.save(new User("Hipster", "Tochi", "DevOps Engineer", "https://robohash.org/quasetrepudiandae.png?size=50x50&set=set1"));
+                repository.save(new User("Tochi", "Don", "DevOps Engineer", "https://robohash.org/quasetrepudiandae.png?size=50x50&set=set1"));
+
         };
     }
 
