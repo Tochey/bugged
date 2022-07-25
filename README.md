@@ -43,16 +43,16 @@ Maybe you can mention me or this repo in the acknowledgements too
   <summary>Client</summary>
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
-    <li><a href="https://tailwindcss.com/">BootstrapCSS</a></li>
+    <li><a href="https://getbootstrap.com/">BootstrapCSS</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://www.typescriptlang.org/">Java</a></li>
-    <li><a href="https://expressjs.com/">Spring boot</a></li>
-    <li><a href="https://go.dev/">Spring Cloud</a></li>
+    <li><a href="https://www.java.com/en/">Java</a></li>
+    <li><a href="https://spring.io/projects/spring-boot">Spring boot</a></li>
+    <li><a href="https://spring.io/projects/spring-cloud">Spring Cloud</a></li>
   </ul>
 </details>
 
@@ -87,15 +87,14 @@ navigate to issue-service/src/main/resources/application.properties &
 user-service/src/main/resources/application.properties
 ```
 
-Start all microservices
-
+Finally
 ```bash
-  yarn test test
+ Start all microservices
 ```
 
 <!-- Contact -->
 ## :handshake: Contact
 
-Your Name - tochey@outlook.com
+Email - tochey@outlook.com
 
 
