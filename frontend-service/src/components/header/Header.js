@@ -8,19 +8,19 @@ const Header = ({openIssue, openUser}) => {
     const [user, setUser] = useState(false)
 
     const DynamicCreateBtn = () => {
-         return (
-             // eslint-disable-next-line
-             <a
-                 onClick={() => {
-                     setState(openIssue)
-                     setUser(openUser)
-                 }
-             }
-                 className="btn btn-sm btn-primary w-full w-lg-auto popup-btn"
-             >
-                 Create
-             </a>
-         )
+        return (
+            // eslint-disable-next-line
+            <a
+                onClick={() => {
+                    setState(openIssue)
+                    setUser(openUser)
+                }
+                }
+                className="btn btn-sm btn-primary w-full w-lg-auto popup-btn"
+            >
+                Create
+            </a>
+        )
     }
     return (
         <>
@@ -39,42 +39,38 @@ const Header = ({openIssue, openUser}) => {
                         <div className="navbar-nav mx-lg-auto">
                             <Link to="/">
                                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                            <a className="nav-item nav-link active"  aria-current="page">All issues</a>
+                                <a className="nav-item nav-link active" aria-current="page">All issues</a>
                             </Link>
                             <Link to="/open-issues">
-                            <a className="nav-item nav-link" href="/">Open issues</a>
+                                <a className="nav-item nav-link" href="/">Open issues</a>
                             </Link>
                             <Link to="/completed-issues">
-                            <a className="nav-item nav-link" href="/">Completed issues</a>
+                                <a className="nav-item nav-link" href="/">Completed issues</a>
                             </Link>
-                            <a className="nav-item nav-link" href="https://www.linkedin.com/in/tochidon/" target="_blank" rel="noreferrer">About me</a>
+                            <a className="nav-item nav-link" href="https://www.linkedin.com/in/tochidon/"
+                               target="_blank" rel="noreferrer">About me</a>
                             <a className="nav-item nav-link" href="/">Source</a>
                         </div>
                         <div className="navbar-nav ms-lg-4">
                             <Link to="/user">
 
-                            <a className="nav-item nav-link" href="/">User</a>
+                                <a className="nav-item nav-link" href="/">User</a>
                             </Link>
                         </div>
                         <div className="d-flex align-items-lg-center mt-3 mt-lg-0">
-                                <DynamicCreateBtn />
+                            <DynamicCreateBtn/>
                         </div>
                         <div className="navbar-nav ms-lg-0">
-                            <Link to="/user">
-                                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                                <a className="nav-item nav-link">Logout</a>
-                            </Link>
                         </div>
                     </div>
                 </div>
 
             </nav>
-            <CreateIssue open={state} onClose={() => setState(false)} />
+            <CreateIssue open={state} onClose={() => setState(false)}/>
             <CreateUser open={user} onClose={() => setUser(false)}/>
         </>
     )
 }
-
 
 
 export default Header

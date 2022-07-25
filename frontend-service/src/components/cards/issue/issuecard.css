@@ -1,8 +1,9 @@
 @import url(https://unpkg.com/@webpixels/css@1.0/dist/index.css);
 .issue-number{
     background-color: #16192c;
-    padding: 5px 10px;
+    padding: 10px;
     color: white;
+
 }
 .issue-box{
     margin-top: 10px !important;

@@ -32,7 +32,6 @@ const EditPage = ({open, onClose, issueId}) => {
         priority: ""
     });
 
-
     // eslint-disable-next-line react-hooks/rules-of-hooks
         useEffect(() => {
             axios.get("http://localhost:9191/issues/get/" + issueId).then((e) => setIssue(e.data))

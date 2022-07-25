@@ -17,12 +17,6 @@ Maybe you can mention me or this repo in the acknowledgements too
  
 <h4>
     <a href="https://github.com/Louis3797/awesome-readme-template/">View Demo</a>
-  <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template">Documentation</a>
-  <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">Report Bug</a>
-  <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">Request Feature</a>
   </h4>
 </div>
 
@@ -60,81 +54,39 @@ Maybe you can mention me or this repo in the acknowledgements too
     <li><a href="https://www.typescriptlang.org/">Java</a></li>
     <li><a href="https://expressjs.com/">Spring boot</a></li>
     <li><a href="https://go.dev/">Spring Cloud</a></li>
-    <li><a href="https://nestjs.com/">mySQL</a></li>
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.mysql.com/">MySQL</a></li>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-    <li><a href="https://redis.io/">Redis</a></li>
-    <li><a href="https://neo4j.com/">Neo4j</a></li>
-    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>DevOps</summary>
-  <ul>
-    <li><a href="https://www.docker.com/">Docker</a></li>
-    <li><a href="https://www.jenkins.io/">Jenkins</a></li>
-    <li><a href="https://circleci.com/">CircleCLI</a></li>
+ <li><a href="https://nestjs.com/">mySQL</a></li>
   </ul>
 </details>
 
 <!-- Features -->
 ### :dart: Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Create Issue with an array of attributes attached
+- Assigne issues and visually view the current status
+- Ability to create new users
 
-<!-- Color Reference -->
-### :art: Color Reference
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Primary Color | ![#222831](https://via.placeholder.com/10/222831?text=+) #222831 |
-| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
-| Accent Color | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
-| Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
-
-
-<!-- Env Variables -->
-### :key: Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
 
 <!-- Getting Started -->
 ## 	:toolbox: Getting Started
 
-<!-- Prerequisites -->
-### :bangbang: Prerequisites
-
-This project uses Yarn as package manager
+Clone this repository
 
 ```bash
- npm install --global yarn
+ git clone https://github.com/Tochey/bugged.git
 ```
 
-<!-- Installation -->
-### :gear: Installation
-
-Install my-project with npm
+Conofigure mySQL db
 
 ```bash
-  yarn install my-project
-  cd my-project
+navigate to issue-service/src/main/resources/application.properties &
+user-service/src/main/resources/application.properties
 ```
-   
-<!-- Running Tests -->
-### :test_tube: Running Tests
 
 To run tests, run the following command
 

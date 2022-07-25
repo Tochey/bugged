@@ -37,8 +37,8 @@ public class IssueserviceApplication {
 //        };
 
         return (args) -> {
-            repo.save(new Issue("Issue 1 and this is ad test for -- CRITICAL PRIO - TODO", "Please ignore for now", 1, Priority.CRITICAL, Status.TODO, "Algo"));
-            repo.save(new Issue("Issue 2 and this is a test for -- CRITICAL NORMAL - REVIEW", "Please ignore for now", 2, Priority.NORMAL, Status.REVIEW, "Algo"));
+            repo.save(new Issue("Need to migrate from mySQL to mongoDB", "We need to migrate immediately", 1, Priority.CRITICAL, Status.TODO, "Algo"));
+            repo.save(new Issue("Issue cards are not aligned on our website, should be a quick fix", "This has been persistent for days", 2, Priority.NORMAL, Status.REVIEW, "Algo"));
             repo.save(new Issue("Issue 2 and this is a test for -- CRITICAL IMPORTANT - INPROGRESS", "Please ignore for now", 3, Priority.IMPORTANT, Status.INPROGRESS, "Algo"));
             repo.save(new Issue("Issue 2 and trhis is also a testing situation", "Please ignore for now just ignore ", 4, Priority.IMPORTANT, Status.INPROGRESS, "Algo"));
         };

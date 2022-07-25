@@ -44,6 +44,7 @@ table th {
 
 .table__link {
     color: #00008b;
+    cursor: pointer;
 }
 
 .table__assignee {
@@ -170,6 +171,8 @@ table th {
         font-weight: bold;
         text-transform: uppercase;
     }
+
+
 
     table td:last-child {
         border-bottom: 0;

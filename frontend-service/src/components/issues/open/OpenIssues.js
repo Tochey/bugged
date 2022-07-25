@@ -39,10 +39,10 @@ const RenderInfo = ({issues}) => {
                     <span className={'badge badge--'+`${e.status}`}>{e.status}</span>
                 </td>
                 <td data-label="Due Date">
-                    <a className="table__link" href="" onClick={() => {
+                    <a className="table__link"  onClick={() => {
                         setIssueId(e.issueId)
                         setState(true)
-                    }} > #12024 </a>
+                    }} > #{e.val} </a>
                 </td>
                 <td data-label="Amount" colSpan="4">
                     {e.subject}
