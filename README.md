@@ -4,11 +4,8 @@
   <p>
     A lightweight issue tracker build with a microservices architecture
   </p>
- [View Demo](https://github.com/Tochey/bugged/files/9178548/buggedDemo.mp4.zip) 
-<h4>[buggedDemo.mp4.zip](https://github.com/Tochey/bugged/files/9178567/buggedDemo.mp4.zip)
+  <a href="https://github.com/Tochey/bugged/files/9178548/buggedDemo.mp4.zip"> View Demo </a>
 
-   
-  </h4>
 </div>
 
 <br />
