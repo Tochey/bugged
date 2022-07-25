@@ -31,7 +31,9 @@ Maybe you can mention me or this repo in the acknowledgements too
 ### :camera: Screenshots
 
 <div align="center"> 
+ 
  <img src ="https://user-images.githubusercontent.com/54341970/180703303-080a4a4a-5553-4124-8771-d4397ff7d526.png" >
+
 </div>
 
 
